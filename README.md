@@ -10,8 +10,11 @@ See: http://people.scs.carleton.ca/~barbeau/Publications/2015/GNURadio_2015.pdf
 Installing
 
 git clone https://github.com/michelbarbeau/gr-quantomm
-cd gr-quantomm/build 
+
+cd gr-quantomm/build
+ 
 make
+
 sudo make install
 
 To run within gnuradio-companion
