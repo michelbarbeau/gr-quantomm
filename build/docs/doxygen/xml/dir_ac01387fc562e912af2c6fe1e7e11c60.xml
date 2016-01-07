@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_ac01387fc562e912af2c6fe1e7e11c60" kind="dir">
+    <compoundname>quantomm</compoundname>
+    <innerfile refid="api_8h">api.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/barbeau/gr-quantomm/include/quantomm/"/>
+  </compounddef>
+</doxygen>
