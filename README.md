@@ -25,4 +25,4 @@ sudo make install
 
 To run within gnuradio-companion
 
-Open the flow graph  gr-llsr/quantomm/simulation.grc
+Open the flow graph  gr-quantomm/examples/simulation.grc
