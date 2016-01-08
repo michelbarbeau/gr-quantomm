@@ -11,7 +11,13 @@ Installing
 
 git clone https://github.com/michelbarbeau/gr-quantomm
 
-cd gr-quantomm/build
+cd gr-quantomm
+
+mkdir build
+
+cd build
+
+cmake ../
  
 make
 
