@@ -9,7 +9,7 @@ See: http://people.scs.carleton.ca/~barbeau/Publications/2015/GNURadio_2015.pdf
 
 ## Installing
 
-`ggit clone https://github.com/michelbarbeau/gr-quantomm`
+`git clone https://github.com/michelbarbeau/gr-quantomm`
 
 ## Building
 
