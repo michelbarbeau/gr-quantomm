@@ -1,4 +1,0 @@
-/home/barbeau/gr-quantomm/build/apps/CMakeFiles/pygen_apps_9a6dd.dir
-/home/barbeau/gr-quantomm/build/CMakeFiles/uninstall.dir
-/home/barbeau/gr-quantomm/build/docs/doxygen/CMakeFiles/doxygen_target.dir
-/home/barbeau/gr-quantomm/build/python/CMakeFiles/pygen_python_59b98.dir
