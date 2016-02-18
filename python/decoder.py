@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # 
 # Copyright 2016 Michel Barbeau.
-# Version: January 6, 2016 
+# Version: February 17, 2016 
 # This is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3, or (at your option)
@@ -76,7 +76,7 @@ class decoder(gr.sync_block):
         # post encrypted data, converted to the PDU PMT  
         self.message_port_pub(pmt.intern('plaintext'), \
             pmt.cons(pmt.to_pmt({}), \
-                pmt.init_u32vector(len(plaintext),plaintext)))
+                pmt.init_u8vector(len(plaintext),plaintext)))
 
     def work(self, input_items, output_items):
 	# feedback to encoder

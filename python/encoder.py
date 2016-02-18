@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # 
 # Copyright 2016 Michel Barbeau.
-# Version: January 6, 2016 
+# Version: February 17, 2016 
 # This is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3, or (at your option)
