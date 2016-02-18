@@ -32,3 +32,8 @@ sudo make install
 To run within gnuradio-companion
 
 Open the flow graph  gr-quantomm/examples/simulation.grc.
+
+To run outside gnuradio-companion
+
+cd gr-quantomm/examples
+python top_block.py
