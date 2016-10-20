@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # 
-# Copyright 2016 Michel Barbeau.
-# Version: February 17, 2016 
+# Copyright 2016 Michel Barbeau, Carleton University.
+# Version: October 19, 2016 
 # This is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3, or (at your option)
@@ -27,8 +27,6 @@ import sys
 
 class decoder(gr.sync_block):
     "Quantum decoder"
-    # debug mode flag
-    debug_stderr=True
     # rectilinear basis & diagonal basis angles
     basis = [[0, 90], [45, 135]]
     # received key bit buffer
@@ -38,7 +36,10 @@ class decoder(gr.sync_block):
     # decoded bit
     dec_bit = 0
 
-    def __init__(self):
+    # constructor
+    def __init__(self,
+        # debug mode
+        debug=True):
         gr.sync_block.__init__(
             self,
             name = "decoder",
@@ -49,6 +50,8 @@ class decoder(gr.sync_block):
 		      numpy.uint32],
 	    # output signature
             out_sig = None)
+        # debug mode flag
+        self.debug=debug
 	# asynchronous encrypted in data port, 0s and 1s
  	self.message_port_register_in(pmt.intern('ciphertext'))
         self.set_msg_handler(pmt.intern('ciphertext'), self.handle_msg)
@@ -69,7 +72,7 @@ class decoder(gr.sync_block):
                 # post decrypted data bit
                 t = ciphertext[i]^k
                 plaintext.append(t)
-	if self.debug_stderr: 
+	if self.debug: 
            sys.stderr.write("decoder.handle_msg():plain text: " + \
                 str(plaintext) + \
 		" cipher text: " + str(ciphertext) + "\n")

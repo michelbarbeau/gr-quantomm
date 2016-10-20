@@ -4,7 +4,7 @@
   <key>quantomm_decoder</key>
   <category>quantomm</category>
   <import>import quantomm</import>
-  <make>quantomm.decoder()</make>
+  <make>quantomm.decoder($debug)</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name
@@ -17,7 +17,20 @@
   </param>
 
 -->
-
+  <param>
+    <name>Debug mode</name>
+    <key>debug</key>
+    <value>True</value>
+    <type>enum</type>
+    <option>
+      <name>False</name>
+      <key>False</key>
+    </option>
+    <option>
+      <name>True</name>
+      <key>True</key>
+    </option>
+  </param>
   <!-- Make one 'sink' node per input. Sub-nodes:
        * name (an identifier for the GUI)
        * type

@@ -8,7 +8,7 @@ M. Barbeau, "Software Defined Quantum Stream-Cipher," GNU Radio Conference, Wash
 See: http://people.scs.carleton.ca/~barbeau/Publications/2015/GNURadio_2015.pdf
 
 # Copyright 2016 Michel Barbeau, Carleton University.
-# Version: September 23, 2016
+# Version: October 19, 2016
 
 ![Loopback Example](https://github.com/michelbarbeau/gr-quantomm/blob/master/sender.jpg)
 
@@ -30,6 +30,8 @@ cmake ../
 make
 
 sudo make install
+
+sudo ldconfig
 ```
 
 ## Running

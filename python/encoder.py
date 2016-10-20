@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # 
-# Copyright 2016 Michel Barbeau.
-# Version: February 17, 2016 
+# Copyright 2016 Michel Barbeau, Carleton University.
+# Version: October 19, 2016 
 # This is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3, or (at your option)
@@ -26,8 +26,6 @@ import sys
 
 class encoder(gr.interp_block):
     "Quantum encoder"
-    # debug mode flag
-    debug_stderr=True
     # rectilinear basis & diagonal basis angles
     basis = [[0, 90], [45, 135]]
     # plain text buffer
@@ -40,7 +38,9 @@ class encoder(gr.interp_block):
     sel_basis = 0 # first item is random and not used
 
     # constructor
-    def __init__(self):
+    def __init__(self,
+        # debug mode
+        debug=True):
         gr.interp_block.__init__(
             self,
             name="encoder",
@@ -53,6 +53,8 @@ class encoder(gr.interp_block):
 	    # out port of selected bases: 0s and 1s
                        numpy.uint32],
 	    interp = 2) # interpolation ratio
+        # debug mode flag
+        self.debug=debug
 	# asynchronous from-decoder feedback port, 0s (neg.) and 1s (pos.) 
  	self.message_port_register_in(pmt.intern('feedback'))
         self.set_msg_handler(pmt.intern('feedback'), self.handle_msg)
@@ -70,7 +72,7 @@ class encoder(gr.interp_block):
         # consumed plain text
         plaintext = []
         # consume feedback from encoder
-	for _ in range(min(len(self.feedback),len(self.plain_text))):
+	while (min(len(self.feedback),len(self.plain_text)) > 0):
 		# consume a feedback item
 		f = self.feedback.pop(0)
                 feedback.append(f)
@@ -82,10 +84,10 @@ class encoder(gr.interp_block):
 			plaintext.append(d)
 			# post encrypted data bit
 			ciphertext.append(k^d)
-	if self.debug_stderr: 
+	if self.debug: 
            sys.stderr.write("encoder.handle_msg():feedback: " + \
                 str(feedback) + "\n")
-	if self.debug_stderr: 
+	if self.debug: 
            sys.stderr.write("encoder.handle_msg():plain text: " + \
                 str(plaintext) + \
 		" cipher text: " + str(ciphertext) + "\n")
@@ -109,7 +111,7 @@ class encoder(gr.interp_block):
 		output_items[1][i] = self.basis[self.sel_basis][r]
 		# memorize random bit
 		self.key_bit.append(r)
-	if self.debug_stderr: 
+	if self.debug: 
            sys.stderr.write("encoder.work():bases: " + \
                 str(output_items[0]) + \
 		" angles: " + str(output_items[1]) + "\n")
