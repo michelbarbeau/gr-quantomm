@@ -36,6 +36,8 @@ sudo ldconfig
 
 ## Running
 
+![Loopback Example](https://github.com/michelbarbeau/gr-quantomm/blob/master/simulation.png)
+
 To run within gnuradio-companion
 
 Open the flow graph  gr-quantomm/examples/simulation.grc.
