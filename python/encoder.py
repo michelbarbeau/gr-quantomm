@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # 
 # Copyright 2016 Michel Barbeau, Carleton University.
-# Version: October 19, 2016 
+# Version: November 5, 2016 
 # This is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3, or (at your option)
@@ -83,7 +83,7 @@ class encoder(gr.interp_block):
 			d = self.plain_text.pop(0)
 			plaintext.append(d)
 			# post encrypted data bit
-			ciphertext.append(k^d)
+			ciphertext.append(int(k^d))
 	if self.debug: 
            sys.stderr.write("encoder.handle_msg():feedback: " + \
                 str(feedback) + "\n")
