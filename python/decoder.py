@@ -108,6 +108,9 @@ class decoder(gr.sync_block):
 		else:
 			# store a random value
 			self.dec_bit = random.randint(0, 1)
+	if self.debug: 
+           sys.stderr.write("decoder.work():feedback: " + \
+                str(feedback) + "\n")
         # post feedback to encoder
         self.message_port_pub(pmt.intern('feedback'), 
 		pmt.to_pmt(feedback)) 

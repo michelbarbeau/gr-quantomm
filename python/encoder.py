@@ -98,6 +98,8 @@ class encoder(gr.interp_block):
     # main
     def work(self, input_items, output_items):
 	# buffer input data
+        sys.stderr.write("encoder.work():len(input_items[0])): " +  \
+             str(len(input_items[0])) + "\n")
 	self.plain_text.extend(input_items[0])
 	# post photon angle, previous basis pairs
 	for i in range(len(output_items[0])):
