@@ -10,8 +10,8 @@ See: http://people.scs.carleton.ca/~barbeau/Publications/2015/GNURadio_2015.pdf
 
 ```
 
-# Copyright 2016 Michel Barbeau, Carleton University.
-# Version: November 5, 2016
+# Copyright 2017 Michel Barbeau, Carleton University.
+# Version: March 4, 2017
 
 ![Loopback Example](https://github.com/michelbarbeau/gr-quantomm/blob/master/sender.jpg)
 
@@ -73,3 +73,12 @@ contents =
 ***********************************
 
 ```
+
+## Work in Progress
+
+An implementation using laser, optical hardware and mini computers is being completed. Watch the following youtube video demo.
+
+[![Saleh Almousa Implementation](https://i1.ytimg.com/vi/watch?v=qfJu_bHB7PU/hqdefault.jpg)](https://www.youtube.com/watch?v=qfJu_bHB7PU)
+
+Details will be published soon.
+
