@@ -78,7 +78,7 @@ contents =
 
 An implementation using laser, optical hardware and mini computers is being completed. Watch the following youtube video demo.
 
-[![Saleh Almousa Implementation](https://i1.ytimg.com/vi/watch?v=qfJu_bHB7PU/hqdefault.jpg)](https://www.youtube.com/watch?v=qfJu_bHB7PU)
+[![Saleh Almousa Implementation](https://i1.ytimg.com/vi/qfJu_bHB7PU/hqdefault.jpg)](https://youtu.be/qfJu_bHB7PU)
 
 Details will be published soon.
 
